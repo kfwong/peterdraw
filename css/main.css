@@ -1,0 +1,21 @@
+body{
+	margin: 0px;
+    position: relative;
+    width: 100%;
+}
+
+#intro-img{
+	margin:0px;
+    background-color: gray;
+}
+
+#intro-img img{
+	margin:0px;
+	width:100%;
+}
+
+.item { 
+	width: 20%; 
+	background-color:blue;
+	margin-bottom: 10px;
+}

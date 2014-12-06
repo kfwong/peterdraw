@@ -1,0 +1,27 @@
+{
+  "name": "peterdraw",
+  "version": "0.0.0",
+  "authors": [
+    "kfwong <kfwong@zoho.com>"
+  ],
+  "description": "ezsofe",
+  "moduleType": [
+    "amd"
+  ],
+  "keywords": [
+    "peterdraw",
+    "ezsofe"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "masonry": "~3.2.1",
+    "jquery": "~2.1.1"
+  }
+}
