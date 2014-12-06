@@ -2,11 +2,13 @@ body{
 	margin: 0px;
     position: relative;
     width: 100%;
+    background: url('../img/bg.png') repeat fixed 0% 0% #303030;
 }
 
 #intro-img{
 	margin:0px;
-    background-color: gray;
+    background-color: #D3D3D3;
+    margin-bottom:20px;
 }
 
 #intro-img img{
@@ -14,8 +16,26 @@ body{
 	width:100%;
 }
 
+#container{
+	margin-left:auto;
+	margin-right:auto;
+}
+
 .item { 
-	width: 20%; 
-	background-color:blue;
-	margin-bottom: 10px;
+	width: 350px; 
+	padding: 10px;
+	margin-bottom:20px;
+	background-color: #D3D3D3;
+	font-size: 10pt;
+}
+
+.item img {
+	width:345px;
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+p{
+	padding: 5px;
 }
