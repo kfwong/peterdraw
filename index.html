@@ -8,11 +8,20 @@
 		<link rel="stylesheet" href="css/main.css"/>
 		<link rel="stylesheet" href="bower_components/pushy/css/pushy.css"/>
 		<link rel="stylesheet" href="bower_components/animate-css/animate.min.css"/>
+		<link rel="stylesheet" href="bower_components/font-awesome-css/css/font-awesome.min.css"/>
+		<link href='http://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Titillium+Web' rel='stylesheet' type='text/css'>
+
+		<style>
+			
+		</style>
 
 		<script src="bower_components/jquery/dist/jquery.min.js"></script>
 		<script src="bower_components/masonry/dist/masonry.pkgd.min.js"></script>
 		<script src="bower_components/jquery-viewport-checker/src/jquery.viewportchecker.js"></script>
 		<script src="bower_components/pushy/js/pushy.min.js"></script>
+		<script src="bower_components/skrollr/dist/skrollr.min.js"></script>
+		<script src="bower_components/skrollr-menu/dist/skrollr.menu.min.js"></script>
 
 		<script type="text/javascript">
 			$(document).ready(function(){
@@ -27,29 +36,57 @@
 				$('.item').viewportChecker({
     				classToAdd: 'visible animated fadeInUp'
 				});
+
+				var s = skrollr.init();
+				skrollr.menu.init(s,{
+					easing: 'outCubic',
+					duration: function(currentTop, targetTop) {
+				        return 2000;
+				    },
+				});
 			});
 
 		</script>
 	</head>
 
-	<body>
+	<body id="home">
 		<!-- Pushy Menu -->
 		<nav class="pushy pushy-left">
 		    <ul>
-		        <li><a href="#">Item 1</a></li>
-		        <li><a href="#">Item 2</a></li>
+		        <li><a href="#home">Home</a></li>
+		        <li><a href="#blog-posts">Blog Posts</a></li>
+		        <li><a href="#about-me">About Me</a></li>
+		        <li><a href="#showcase">Showcases</a></li>
 		    </ul>
 		</nav>
+
+		<div class="menu-btn">&#9776; Menu</div>
 
 		<div id="container">
 			<!-- Site Overlay -->
 			<div class="site-overlay"></div>
-			
-			<div id="intro-img">
-				<div class="menu-btn">&#9776; Menu</div>
-				<img src="img/1.jpg">
-			</div>
 
+			<section id="slide-1" class="homeSlide">
+			    <div class="bcg"
+			        data-400-center="background-position: 50% 0px;"
+			        data-top-bottom="background-position: 50% -300px;"
+			        data-anchor-target="#slide-1">
+
+		        	<div class="hsContainer">
+			            <div class="hsContent"
+			            	data--150-center="opacity: 1"
+			            	data--150-top="opacity: 0"
+			                data-anchor-target="#slide-1 img">
+			                <img src="../img/avatar.png"/>
+			                <h1>My Blog Name</h1>
+			                <i class="fa fa-github"></i><i class="fa fa-facebook"></i><i class="fa fa-twitter"></i><i class="fa fa-tumblr"></i>
+			            </div>
+			        </div>
+
+			    </div>
+			</section>
+
+			<h2 id="blog-posts">Blog Posts</h2>
 		  	<div id="grid">
 				<ul>
 					<li class="item invisible">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla id dapibus sem. Mauris non diam vitae lacus fringilla imperdiet non ac nisi. Sed tempus, odio sed interdum luctus, leo enim tincidunt lorem, et eleifend erat mi sit amet elit. Pellentesque luctus aliquet leo id faucibus. Suspendisse aliquet ultricies tellus, vitae ullamcorper leo ornare ac. Nunc nulla eros, volutpat et posuere ut, tempus nec dolor. Praesent a dui dui. Nunc tristique ullamcorper nisl, eu pulvinar orci porta eu. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Phasellus ut turpis pellentesque, egestas lorem et, lobortis leo. </li>
@@ -74,6 +111,57 @@
 					<li class="item invisible">lacinia ante in, interdum lorem. Proin sit amet porttitor sapien. Proin quis ornare nisl, et pellentesque elit. Suspendisse potenti. Proin ac feugiat tellus, nec ultricies ligula. Quisque erat eros, dictum at auctor sed, lacinia dapibus lectus. Donec ullamcorper quam ac vehicula ultricies. Ut hendrerit quis felis quis porta. Maecenas ut pulvinar est. Etiam vestibulum diam id massa sollicitudin lacinia. Nullam ornare convallis nibh id ultrices. </li>
 				</ul>
 			</div>
+
+			<section id="slide-2" class="homeSlide">
+			    <div class="bcg"
+			    	data-center="background-position: 50% 0px;"
+			        data-top-bottom="background-position: 50% -200px;"
+        			data-anchor-target="#slide-2">
+
+        			<div id="about-me" class="hsContainer">
+			            <div class="hsContent"
+			            	data--150-center="opacity: 1"
+			            	data--150-top="opacity: 0"
+			                data-anchor-target="#slide-2">
+			                <h1>About Me</h1>
+			                <p>lacinia ante in, interdum lorem. Proin sit amet porttitor sapien. Proin quis ornare nisl, et pellentesque elit. Suspendisse potenti. Proin ac feugiat tellus, nec ultricies ligula. Quisque erat eros, dictum at auctor sed, lacinia dapibus lectus. Donec ullamcorper quam ac vehicula ultricies. Ut hendrerit quis felis quis porta. Maecenas ut pulvinar est. Etiam vestibulum diam id massa sollicitudin lacinia. Nullam ornare convallis nibh id ultrices. </p>
+			            </div>
+			        </div>
+
+			    </div>
+			</section>
+
+			<h2>Showcases</h2>
+			<div id="showcase">
+				<ul>
+					<li><img src="img/sample-1.png"/></li>
+					<li><img src="img/sample-2.png"/></li>
+					<li><img src="img/sample-3.png"/></li>
+					<li><img src="img/sample-4.png"/></li>
+					<li><img src="img/sample-1.png"/></li>
+					<li><img src="img/sample-2.png"/></li>
+					<li><img src="img/sample-3.png"/></li>
+					<li><img src="img/sample-4.png"/></li>
+					<li><img src="img/sample-1.png"/></li>
+					<li><img src="img/sample-2.png"/></li>
+					<li><img src="img/sample-3.png"/></li>
+					<li><img src="img/sample-4.png"/></li>
+					<li><img src="img/sample-1.png"/></li>
+					<li><img src="img/sample-2.png"/></li>
+					<li><img src="img/sample-3.png"/></li>
+					<li><img src="img/sample-4.png"/></li>
+					<li><img src="img/sample-1.png"/></li>
+					<li><img src="img/sample-2.png"/></li>
+					<li><img src="img/sample-3.png"/></li>
+					<li><img src="img/sample-4.png"/></li>
+					<li><img src="img/sample-1.png"/></li>
+				</ul>
+			</div>
+
+			<footer>
+				<p>lacinia ante in, interdum lorem. Proin sit amet porttitor sapien. Proin quis ornare nisl, et pellentesque elit. Suspendisse potenti. Proin ac feugiat tellus, nec ultricies ligula. Quisque erat eros, dictum at auctor sed, lacinia dapibus lectus. Donec ullamcorper quam ac vehicula ultricies. Ut hendrerit quis felis quis porta. Maecenas ut pulvinar est. Etiam vestibulum diam id massa sollicitudin lacinia. Nullam ornare convallis nibh id ultrices. </p>
+				<p>Copyright 2014 &copy; My Blog Name</p>
+			</footer>
 		</div>
 	</body>
 </html> 

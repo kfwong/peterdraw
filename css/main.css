@@ -5,20 +5,10 @@ body{
     background: url('../img/bg.png') repeat fixed 0% 0% #303030;
 }
 
-#intro-img{
-	margin:0px;
-    background-color: #D3D3D3;
-    margin-bottom:20px;
-}
-
-#intro-img img{
-	margin:0px;
-	width:100%;
-}
-
 #grid{
 	margin-left:auto;
 	margin-right:auto;
+	position: relative;
 }
 
 .item { 
@@ -41,10 +31,47 @@ body{
 	visibility: hidden;
 }
 
-p{
-	padding: 5px;
+#showcase{
+	width: 100%;
 }
 
+#showcase ul{
+	margin-left: auto;
+	margin-right: auto;
+	width:90%;
+	padding: 0px;
+}
+
+#showcase li{
+	display: inline;
+}
+
+#showcase img{
+	max-width: 200px;
+}
+
+p{
+	padding: 5px;
+	font-family: 'Titillium Web', sans-serif;
+}
+
+div{
+	font-family: 'Titillium Web', sans-serif;
+}
+
+h1, h2{
+	font-family: 'Poiret One', cursive;
+	padding: 0px 20px 0px 20px;
+}
+
+footer{
+	position: absolute;
+	padding: 20px;
+	bottom:0px;
+	background-color: #2C3539;
+	color:white;
+	font-size:10pt;
+}
 
 
 html, body{
@@ -56,6 +83,7 @@ html, body{
 .pushy ul{
     margin: 0;
     padding: 0;
+    z-index: 1001;
 }
 
 /* Menu Button */
@@ -72,9 +100,66 @@ html, body{
 	position:absolute;
 	top:10px
 	left:10px;
+	z-index: 1000;
 }
 
 .menu-btn:hover{
 	background: #00b4ff;
 	color: #FFF;
+}
+
+/* Parallax */
+/* CSS */
+.bcg {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+}
+.hsContainer {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    height:100%;
+    overflow: hidden;
+    position: absolute
+    margin-top: auto;
+    margin-bottom: auto
+}
+
+.hsContent {
+    max-width: 450px;
+    display: table-cell;
+    vertical-align: middle;
+    color: #ebebeb;
+    padding: 0 8%;
+    text-align: center
+}
+
+.hsContent h2{
+	padding-top: 20px;
+	padding-bottom: 20px;
+	background-color: black;
+	max-width: 450px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.hsContent i{
+	font-size: 32pt;
+	padding:20px;
+}
+
+/* Slide 1 */
+#slide-1 .bcg {
+	height:600px;
+	background-image:url('../img/intro.jpg');
+}
+
+/* CSS - Slide 2 */
+#slide-2 .bcg {
+    height: 600px;
+    background-image:url('../img/1.jpg');
 }
