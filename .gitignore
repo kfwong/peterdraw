@@ -1,2 +1,8 @@
+<<<<<<< HEAD
 _site/
 .DS_Store
+=======
+_site
+.sass-cache
+Gemfile*
+>>>>>>> d6a784dd94c4e763898634d5db456588d5d02de0
