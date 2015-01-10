@@ -1,0 +1,21 @@
+{
+  "name": "peterdraw",
+  "version": "1.0",
+  "homepage": "\"\"",
+  "authors": [
+    "kfwong <kfwong@zoho.com>"
+  ],
+  "description": "Peter Draw personal website.",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "masonry": "~3.2.2",
+    "fancybox": "~2.1.5"
+  }
+}
