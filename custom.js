@@ -8,12 +8,15 @@ $(document).ready(function(){
 	});
 
 	var gallery = document.querySelector('#gallery');
-	var msnry2 = new Masonry( gallery, {
-		itemSelector: '.item',
-		gutter: 10,
-		isFitWidth: true,
-		isAnimated: false
-	});	
+		// layout Masonry again after all images have loaded
+		imagesLoaded(gallery, function() {
+		var msnry2 = new Masonry( gallery, {
+			itemSelector: '.item',
+			gutter: 10,
+			isFitWidth: true,
+			isAnimated: false
+		});
+	});
 
 	$('.fancybox').fancybox({
         padding : 0,
